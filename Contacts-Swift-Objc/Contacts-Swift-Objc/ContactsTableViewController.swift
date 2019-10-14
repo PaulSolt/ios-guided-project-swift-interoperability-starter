@@ -10,17 +10,30 @@ import UIKit
 
 class ContactsTableViewController: UITableViewController {
 	
+	// Swift and we want to import Objective-C code file
+	var contactController = LSIContactController()
+	
+	
 	// MARK: - Table view data source
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		#warning("implement method")
-		return 0
+		return contactController.contacts.count
+		
+		// QUESTION: Why is it [Any]! instead of [AnyObject]! ?
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
 		
-		#warning("implement method")
-		
-		return UITableViewCell()
+		// By default an NSArray is imported at Any, which means we need to convert to our
+		// type to use the properties
+		if let contact = contactController.contacts[indexPath.row] as? Contact {
+			cell.textLabel?.text = contact.name
+			cell.detailTextLabel?.text = contact.relationship
+		} else {
+			print("Error: Didn't get a contact from the Contact NSArray")
+		}
+				
+		return cell
 	}
 }
