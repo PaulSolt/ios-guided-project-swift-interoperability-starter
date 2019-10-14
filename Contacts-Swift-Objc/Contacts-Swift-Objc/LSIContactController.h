@@ -10,7 +10,12 @@
 
 @interface LSIContactController : NSObject
 
-@property (nonatomic, readonly) NSArray *contacts;
+@property (nonatomic, readonly) NSArray *contacts;		// This is a computed property
+
+// addContact
+// removeContact 
+
+//- (NSArray *)contacts; // Getter
 
 // readonly will not automatically create a setter `setContacts:`
 

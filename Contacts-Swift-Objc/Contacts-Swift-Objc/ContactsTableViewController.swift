@@ -13,6 +13,13 @@ class ContactsTableViewController: UITableViewController {
 	// Swift and we want to import Objective-C code file
 	var contactController = LSIContactController()
 	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+//		var contacts = contactController.contacts
+//		contacts?.append(Contact(name: "Bob", relationship: "No idea...."))
+	}
+	
 	
 	// MARK: - Table view data source
 	
