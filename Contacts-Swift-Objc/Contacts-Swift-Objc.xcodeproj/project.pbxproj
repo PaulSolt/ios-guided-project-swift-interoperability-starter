@@ -13,6 +13,7 @@
 		BDD833422354D18300882FD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD833412354D18300882FD7 /* Assets.xcassets */; };
 		BDD833452354D18300882FD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD833432354D18300882FD7 /* LaunchScreen.storyboard */; };
 		BDD8334D2354D19D00882FD7 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD8334C2354D19D00882FD7 /* ContactsTableViewController.swift */; };
+		BDD8334F2354D63E00882FD7 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD8334E2354D63E00882FD7 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BDD833442354D18300882FD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDD833462354D18300882FD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDD8334C2354D19D00882FD7 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		BDD8334E2354D63E00882FD7 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BDD833382354D18200882FD7 /* AppDelegate.swift */,
 				BDD8333A2354D18200882FD7 /* SceneDelegate.swift */,
 				BDD8334C2354D19D00882FD7 /* ContactsTableViewController.swift */,
+				BDD8334E2354D63E00882FD7 /* Contact.swift */,
 				BDD8333E2354D18200882FD7 /* Main.storyboard */,
 				BDD833412354D18300882FD7 /* Assets.xcassets */,
 				BDD833432354D18300882FD7 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD8334F2354D63E00882FD7 /* Contact.swift in Sources */,
 				BDD833392354D18200882FD7 /* AppDelegate.swift in Sources */,
 				BDD8334D2354D19D00882FD7 /* ContactsTableViewController.swift in Sources */,
 				BDD8333B2354D18200882FD7 /* SceneDelegate.swift in Sources */,
