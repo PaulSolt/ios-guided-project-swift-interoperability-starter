@@ -34,13 +34,18 @@ class ContactsTableViewController: UITableViewController {
 		
 		// By default an NSArray is imported at Any, which means we need to convert to our
 		// type to use the properties
-		if let contact = contactController.contacts[indexPath.row] as? Contact {
-			cell.textLabel?.text = contact.name
-			cell.detailTextLabel?.text = contact.relationship
-		} else {
-			print("Error: Didn't get a contact from the Contact NSArray")
-		}
-				
+		
+//		if let contact = contactController.contacts[indexPath.row] as? Contact {
+//			cell.textLabel?.text = contact.name
+//			cell.detailTextLabel?.text = contact.relationship
+//		} else {
+//			print("Error: Didn't get a contact from the Contact NSArray")
+//		}
+		
+		let contact = contactController.contacts[indexPath.row]
+		cell.textLabel?.text = contact.name
+		cell.detailTextLabel?.text = contact.relationship
+		
 		return cell
 	}
 }

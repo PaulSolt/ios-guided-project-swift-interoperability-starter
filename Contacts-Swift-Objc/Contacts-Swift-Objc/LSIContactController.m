@@ -14,7 +14,9 @@
 }
 
 // Private property for internal data storage
-@property (nonatomic, readwrite) NSMutableArray *internalContacts;
+
+// Lightweight generics <Type *> for an NSArray, NSMutableArray, etc
+@property (nonatomic, readwrite) NSMutableArray<Contact *> *internalContacts;
 
 @end
 
@@ -54,7 +56,9 @@
 	[self.internalContacts addObject:[[Contact alloc] initWithName:@"Steph Solt" relationship:@"Wife"]];
 	
 	// Problem with NSArray / NSMutableArray and type safety
-	[self.internalContacts addObject:@"My name is Dave"];
+	//[self.internalContacts addObject:@"My name is Dave"];
+	// With lightweight generics this fails on access: Error: Precondition failed: NSArray element failed to match the Swift Array Element type
+	//	Expected Contact but found __NSCFConstantString: file
 	
 }
 
