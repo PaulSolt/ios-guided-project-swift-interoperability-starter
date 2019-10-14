@@ -16,6 +16,7 @@
 // Private property for internal data storage
 
 // Lightweight generics <Type *> for an NSArray, NSMutableArray, etc
+//@property (nonatomic, readwrite, nonnull) NSMutableArray<LSIContact *> *internalContacts;
 @property (nonatomic, readwrite, nonnull) NSMutableArray<Contact *> *internalContacts;
 
 @end

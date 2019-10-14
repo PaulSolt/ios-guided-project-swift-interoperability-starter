@@ -11,7 +11,7 @@ import UIKit
 class ContactsTableViewController: UITableViewController {
 	
 	// Swift and we want to import Objective-C code file
-	var contactController = LSIContactController()
+	var contactController = ContactController()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

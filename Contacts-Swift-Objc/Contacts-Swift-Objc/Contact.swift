@@ -14,6 +14,7 @@ import Foundation
 // 2. Subclass NSObject
 // 3. #import the special Swift header file
 
+//@objc(LSIContact)		// Renaming Contact to LSIContact in Objc
 class Contact: NSObject {
 	var name: String
 	var relationship: String?
