@@ -26,7 +26,7 @@
 - (instancetype)init {
 	if (self = [super init]) {
 //		_contacts = [[NSArray alloc] init];
-//		_internalContacts = [[NSMutableArray alloc] init];
+		_internalContacts = [[NSMutableArray alloc] init];	// guarentee it exists
 
 		[self addTestData];
 		
