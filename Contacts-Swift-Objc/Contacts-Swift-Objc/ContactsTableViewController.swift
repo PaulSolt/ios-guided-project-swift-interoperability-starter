@@ -24,7 +24,8 @@ class ContactsTableViewController: UITableViewController {
 	// MARK: - Table view data source
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return contactController.contacts.count
+//		return contactController.contacts?.count ?? 0 // nullable
+		return contactController.contacts.count		  // nonnull
 		
 		// QUESTION: Why is it [Any]! instead of [AnyObject]! ?
 	}
@@ -35,6 +36,7 @@ class ContactsTableViewController: UITableViewController {
 		// By default an NSArray is imported at Any, which means we need to convert to our
 		// type to use the properties
 		
+		// null_unspecified
 //		if let contact = contactController.contacts[indexPath.row] as? Contact {
 //			cell.textLabel?.text = contact.name
 //			cell.detailTextLabel?.text = contact.relationship
@@ -42,7 +44,16 @@ class ContactsTableViewController: UITableViewController {
 //			print("Error: Didn't get a contact from the Contact NSArray")
 //		}
 		
-		let contact = contactController.contacts[indexPath.row]
+		// nullable on the contacts property
+//		if let contact = contactController.contacts?[indexPath.row] {
+//			cell.textLabel?.text = contact.name
+//			cell.detailTextLabel?.text = contact.relationship
+//		} else {
+////			resetCell(cell)
+//		}
+		
+		// nonnull on the contacts property
+		let contact = contactController.contacts[indexPath.row]  // [Contact]
 		cell.textLabel?.text = contact.name
 		cell.detailTextLabel?.text = contact.relationship
 		

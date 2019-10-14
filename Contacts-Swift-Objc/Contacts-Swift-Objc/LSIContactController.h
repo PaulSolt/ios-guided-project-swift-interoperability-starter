@@ -12,7 +12,13 @@
 
 @interface LSIContactController : NSObject
 
-@property (nonatomic, readonly) NSArray<Contact *> *contacts;		// This is a computed property
+// nonnull	// [Contact]
+// nullable // [Contact]?
+// null_unspecified   - implicitly unwrapped optional = [Contact]!
+// null_resetable - UITextField.text = nil -> ""
+
+//@property (nonatomic, readonly, nullable) NSArray<Contact *> *contacts;
+@property (nonatomic, readonly, nonnull) NSArray<Contact *> *contacts;		// This is a computed property
 
 // addContact
 // removeContact

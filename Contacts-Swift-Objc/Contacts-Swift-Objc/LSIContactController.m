@@ -16,7 +16,7 @@
 // Private property for internal data storage
 
 // Lightweight generics <Type *> for an NSArray, NSMutableArray, etc
-@property (nonatomic, readwrite) NSMutableArray<Contact *> *internalContacts;
+@property (nonatomic, readwrite, nonnull) NSMutableArray<Contact *> *internalContacts;
 
 @end
 
@@ -26,7 +26,7 @@
 - (instancetype)init {
 	if (self = [super init]) {
 //		_contacts = [[NSArray alloc] init];
-		_internalContacts = [[NSMutableArray alloc] init];
+//		_internalContacts = [[NSMutableArray alloc] init];
 
 		[self addTestData];
 		
@@ -64,7 +64,7 @@
 
 - (void)mutableMethod {
 	
-	NSArray *myArray = [self contacts];
+	// NSArray *myArray = [self contacts];
 	
 	
 	/* What `po myArray` shows without a copy of the internalContacts (__NSArrayM)
